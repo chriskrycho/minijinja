@@ -601,6 +601,10 @@ fn test_deserialize() {
     assert_eq!((a.0).0, SimpleEnum::B);
     assert_eq!((a.1).0, UnitStruct("hello".into()));
     assert_eq!((a.2).0, TaggedUnion::V("workd".into()));
+
+    struct NoDeserialize;
+
+    let invalid: ViaDeserialize<NoDeserialize>;
 }
 
 #[test]
